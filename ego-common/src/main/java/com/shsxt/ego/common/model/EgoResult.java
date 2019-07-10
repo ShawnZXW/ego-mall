@@ -4,7 +4,9 @@ package com.shsxt.ego.common.model;
 import java.io.Serializable;
 
 /**
- * 封装客户端发送上架，下架，删除商品请求后，需要响应的数据模型
+ * 封装客户端发送上架，下架，
+ * 删除商品请求后，
+ * 需要响应的数据模型
  *
  * @author Shawn
  * @date 2019-07-04 20:26
@@ -69,7 +71,7 @@ public class EgoResult implements Serializable {
     }
 
     /***
-     * 静态方法，返回 egoresult 对象
+     * 静态方法，返回 egoResult 对象
      * */
     public static EgoResult ok() {
         return new EgoResult(null);

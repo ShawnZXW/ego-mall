@@ -1,5 +1,7 @@
 # 使用git会自动忽略的文件
 /.idea
+
+# 所有的 .iml 文件
 /ego.iml
 /ego-common/ego-common.iml
 /ego-code-generate/ego-code-generate.iml
@@ -8,13 +10,23 @@
 /ego-rpc/ego-rpc-service/ego-rpc-service.iml
 /ego-rpc/ego-rpc-service-impl/ego-rpc-service-impl.iml
 /ego-rpc/ego-rpc-pojo/ego-rpc-pojo.iml
+/ego-portal-web/ego-portal-web.iml
+/ego-sso-web/ego-sso-web.iml
+/ego-manager-web/ego-manager-web.iml
+/ego-cart-web/ego-cart-web.iml
 
 
-# 所有的target都不用管理
+# 所有的 target 都不用提交
 /ego-common/target
 /ego-code-generate/target
 /ego-manager-web/target
+/ego-portal-web/target
+/ego-cart-web/target
+/ego-sso-web/target
+
 /ego-rpc/ego-rpc-pojo/target
 /ego-rpc/ego-rpc-service/target
 /ego-rpc/ego-rpc-mapper/target
 /ego-rpc/ego-rpc-service-impl/target
+
+
