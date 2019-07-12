@@ -55,5 +55,18 @@ public class ManagerItemController {
         return managerItemService.instock(ids);
     }
 
+    /**
+     * 商品批量删除
+     *
+     * @param ids
+     * @return
+     */
+    @RequestMapping("item/delete")
+    @ResponseBody
+    public EgoResult deleteItemBatch(Long[] ids) {
+        return managerItemService.deleteItemBatch(ids);
+    }
+
+
 
 }

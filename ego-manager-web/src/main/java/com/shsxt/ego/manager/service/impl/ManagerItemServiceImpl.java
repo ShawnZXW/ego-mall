@@ -4,6 +4,7 @@ import com.shsxt.ego.common.model.EgoResult;
 import com.shsxt.ego.common.model.PageResult;
 import com.shsxt.ego.manager.service.IManagerItemService;
 import com.shsxt.ego.rpc.pojo.TbItem;
+import com.shsxt.ego.rpc.pojo.TbItemCatDesc;
 import com.shsxt.ego.rpc.query.ItemQuery;
 import com.shsxt.ego.rpc.service.IItemService;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ public class ManagerItemServiceImpl implements IManagerItemService {
     // 注入远程服务的代理对象
     @Resource
     private IItemService itemServiceProxy;
+
 
     /**
      * 商品分页展示
@@ -50,5 +52,28 @@ public class ManagerItemServiceImpl implements IManagerItemService {
     @Override
     public EgoResult instock(Long[] ids) {
         return itemServiceProxy.updateItemStatusBatch(ids, 2);
+    }
+
+    /**
+     * 批量删除商品
+     *
+     * @param ids
+     * @return
+     */
+    @Override
+    public EgoResult deleteItemBatch(Long[] ids) {
+        return itemServiceProxy.deleteItemBatch(ids);
+    }
+
+    /**
+     * 保存商品
+     *
+     * @param item
+     * @param itemCatDesc
+     * @return
+     */
+    @Override
+    public EgoResult saveItem(TbItem item, TbItemCatDesc itemCatDesc) {
+        return null;
     }
 }

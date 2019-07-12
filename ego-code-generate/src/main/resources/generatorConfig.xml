@@ -39,7 +39,7 @@
 
         <!--生成表-->
 
-        <table tableName="tb_item_param_item" domainObjectName="TbItemParamItem"
+        <table tableName="tb_item_desc" domainObjectName="TbItemDesc"
                enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>

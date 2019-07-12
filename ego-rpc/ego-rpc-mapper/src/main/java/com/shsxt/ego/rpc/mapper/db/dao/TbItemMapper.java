@@ -22,4 +22,6 @@ public interface TbItemMapper {
     public List<TbItem> queryItemsByParams(ItemQuery itemQuery);
 
     int updateItemStatusBatch(Map<String, Object> param);
+
+    int deleteItemBatch(Map<String, Object> param);
 }

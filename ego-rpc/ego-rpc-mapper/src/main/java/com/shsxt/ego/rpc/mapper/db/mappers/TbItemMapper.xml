@@ -179,4 +179,20 @@
     </foreach>
   </update>
 
+  <sql id="deleteSql">
+    <foreach collection="ids" item="id" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+  </sql>
+
+  <!--将商品状态置为3，即为删除-->
+  <update id="deleteItemBatch" parameterType="map">
+    update tb_item
+    set status = 3
+    where id in
+    <foreach collection="ids" item="ids" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+  </update>
+
 </mapper>
