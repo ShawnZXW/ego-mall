@@ -20,6 +20,7 @@ import java.util.Map;
  */
 @Service
 public class PortalItemCatServiceImpl implements IPortalItemCatService {
+
     //注入远程代理对象
     @Resource
     private IItemCatService itemCatServiceProxy;

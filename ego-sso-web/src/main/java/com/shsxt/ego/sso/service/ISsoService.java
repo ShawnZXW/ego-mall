@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
  * 单点登录业务接口
  * - 注册
  * - 登录
- *
+ * - 单点登录项目仅仅实现了注册和登录的简单功能
  * @author Shawn
  * @date 2019-07-08 11:20
  */

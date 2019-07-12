@@ -34,8 +34,6 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
      * -    存在，则放行
      * - 3、反之不存在，
      * -    重定向到登录页面 http:localhost:8083/login
-     * -TODO
-     * - redis 要赶紧配好，才能进行测试
      *
      * @param request
      * @param response

@@ -22,7 +22,7 @@ public class ItemServiceImpl implements IItemService {
     private TbItemMapper itemMapper;
 
     /**
-     * 商品信息分页查询
+     * 商品信息分页展示
      *
      * @param itemQuery
      * @return

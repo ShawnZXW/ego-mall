@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 
-/****
- * 封装响应到前台大广告数据格式
+/**
+ * 封装响应到前台广告大图片的数据格式
  *
- * * @author Shawn
+ * @author Shawn
  * @date 2019-07-05 19:19
  */
 public class BigPicture implements Serializable {

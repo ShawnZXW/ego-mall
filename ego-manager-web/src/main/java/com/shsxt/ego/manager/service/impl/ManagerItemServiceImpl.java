@@ -15,20 +15,38 @@ import java.util.List;
 @Service
 public class ManagerItemServiceImpl implements IManagerItemService {
 
-    // 注入的是远程服务的代理对象
+    // 注入远程服务的代理对象
     @Resource
     private IItemService itemServiceProxy;
 
+    /**
+     * 商品分页展示
+     *
+     * @param itemQuery
+     * @return
+     */
     @Override
     public PageResult<TbItem> itemList(ItemQuery itemQuery) {
         return itemServiceProxy.queryItemsListByParams(itemQuery);
     }
 
+    /**
+     * 下架
+     *
+     * @param ids
+     * @return
+     */
     @Override
     public EgoResult reshelf(Long[] ids) {
         return itemServiceProxy.updateItemStatusBatch(ids, 1);
     }
 
+    /**
+     * 上架
+     *
+     * @param ids
+     * @return
+     */
     @Override
     public EgoResult instock(Long[] ids) {
         return itemServiceProxy.updateItemStatusBatch(ids, 2);

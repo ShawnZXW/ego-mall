@@ -8,7 +8,7 @@ import com.shsxt.ego.rpc.pojo.TbItem;
 import java.util.List;
 
 /**
- * 商品服务接口
+ * 商品业务接口
  */
 public interface IItemService {
 
@@ -25,11 +25,12 @@ public interface IItemService {
 
     /**
      * 完成商品上下架状态的修改
+     *
      * @param itmeIds
      * @param type
      * @return
      */
-    public EgoResult updateItemStatusBatch(Long[] itmeIds,int type);
+    public EgoResult updateItemStatusBatch(Long[] itmeIds, int type);
 
 
 }

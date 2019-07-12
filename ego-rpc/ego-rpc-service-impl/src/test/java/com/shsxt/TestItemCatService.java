@@ -1,7 +1,10 @@
 package com.shsxt;
 
 
+import com.shsxt.ego.common.model.BigPicture;
+import com.shsxt.ego.rpc.pojo.TbContent;
 import com.shsxt.ego.rpc.pojo.TbItemCat;
+import com.shsxt.ego.rpc.service.IContentService;
 import com.shsxt.ego.rpc.service.IItemCatService;
 import com.shsxt.ego.rpc.service.IItemService;
 import org.junit.Test;
@@ -19,7 +22,7 @@ import java.util.List;
         "classpath:spring/applicationContext-redis.xml"} )
 
 /**
- * 测试商品类目业务
+ * 测试商品内容业务
  *
  * - 测试 redis 存储
  *
@@ -27,15 +30,22 @@ import java.util.List;
 public class TestItemCatService {
 
     @Resource
-    private IItemCatService itemCatService;
+    private IContentService contentService;
 
+
+    /**
+     * -TODO
+     * 这个测试该怎么写
+     * -line 43
+     */
     @Test
     public  void test01(){
-        List<TbItemCat> itemCatList= itemCatService.queryAllItemCats();
-        itemCatList.forEach(i->{
+        List<BigPicture> pictures = contentService.queryContentsByCategoryId(89L);
+
+        pictures.forEach(i->{
             System.out.println(i);
         });
-        System.out.println("已经打印完所有商品类目信息");
+        System.out.println("已经打印完所有商品内容信息");
     }
 
 }
